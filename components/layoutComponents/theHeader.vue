@@ -180,7 +180,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="header_mobile__container"
+        <div class="header_mobile__container" v-else
             v-motion
             :initial="{ opacity: 0, y: -20 }"
             :enter="{ opacity: 1, y: 0 }"
