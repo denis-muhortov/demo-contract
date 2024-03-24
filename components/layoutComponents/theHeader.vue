@@ -2,6 +2,7 @@
 export default {
     data: () => ({
         store: useAppStore(),
+        isMobile: false,
     }),
     methods: {
 
@@ -14,6 +15,11 @@ export default {
             else Refheader.classList.remove('scrolled');
 
         });
+
+        const screenWidth = window.screen.width
+        if(screenWidth <= 1020){
+            this.isMobile = true;
+        }
     },
     computed:{
 
@@ -22,7 +28,7 @@ export default {
 </script>
 <template>
     <menu class="header_container" ref="Refheader">
-        <div class="header_container-block">
+        <div class="header_container-block" v-if="!isMobile">
             <div class="block__top"
                 v-motion
                 :initial="{ opacity: 0, y: -10 }"
@@ -174,6 +180,47 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="header_mobile__container"
+            v-motion
+            :initial="{ opacity: 0, y: -20 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
+            <div class="grid">
+                <div class="mobile_left">
+                    <div class="block__bottom-left">
+                        <button class="button-impaired" type="button" aria-label="The main Architectural and Planning Department of Moscow Architecture" title="Главное архитектурно-планировочное управление Москомархитектуры">
+                            <UnLazyImage
+                                src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-logo.png"
+                                blurhash="CMJ[r59G01ae^+IV^+~V"
+                                auto-sizes
+                                alt="Главное архитектурно-планировочное управление Москомархитектуры"
+                                class="image"
+                            />
+                            <a href="/" rel="noopener noreferrer">
+                                Главное архитектурно-планировочное <br>
+                                управление Москомархитектуры
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-right">
+                    <div class="menu" @click="store.showMobileMenu = !store.showMobileMenu">
+                        <div class="menu-line"/>
+                        <div class="menu-line"/>
+                        <div class="menu-line"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Transition name="menu" mode="out-in">
+            <MobileMenu v-if="store.showMobileMenu"/>
+        </Transition>
+        <Transition name="page" mode="out-in">
+            <div class="backdrop" v-if="store.showMobileMenu" @click="store.showMobileMenu = !store.showMobileMenu"/>
+        </Transition>
     </menu>
 </template>
 <style lang="scss" scoped>
@@ -380,5 +427,95 @@ export default {
 }
 .scrolled{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1440px) {
+    .header_container-block {
+        .block__top-left .button-link{
+            margin-right: 10px;
+        }
+        .block__top-right .info_block{
+            margin-left: 20px;
+        }
+    }
+    .header_container-block .block__bottom-middle ul a,
+    .header_container-block .block__bottom-middle li a, 
+    .header_container-block .block__bottom-middle .block_links a{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .header_container-block{
+        opacity: 0;
+        display: none;
+    }
+    .header_mobile__container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    .grid{
+        position: relative;
+        width: 100%;
+        max-width: var(--maxWidth);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .block__bottom-left{
+
+            .button-impaired{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                background-color: transparent;
+
+                a{
+                    margin-left: 10px;
+                    font-size: 12px;
+                    line-height: normal;
+                    font-weight: 700;
+                    color: var(--blue);
+                }
+            }
+        }
+        .mobile-right{
+            .menu{
+                width: 50px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .menu-line{
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 20px;
+                    background-color: var(--blue);
+
+                    &:nth-child(1){
+
+                    }
+                }
+            }
+        }
+    }
+    .backdrop{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: calc(100vw - 0px);
+        height: calc(100vh - 80px);
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
 }
 </style>

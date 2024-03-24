@@ -65,4 +65,10 @@ export default {
   flex-shrink: 0;
   margin: 100px 0 0 0;
 }
+
+@media screen and (max-width: 1020px) {
+  .header{
+    height: 80px;
+  }
+}
 </style>

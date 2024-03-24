@@ -726,6 +726,9 @@ export default {
     }
 }
 @media screen and (max-width: 1020px) {
+    .page{
+        margin-top: 80px;
+    }
     .screen-first {
         .container__title{
             padding-top: 40px;
@@ -872,7 +875,7 @@ export default {
     }
     .screen-six{
         margin-bottom: 50px;
-        
+
         .block-top h3{
             font-size: 24px;
             margin-bottom: 20px;

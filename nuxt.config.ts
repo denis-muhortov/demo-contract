@@ -38,6 +38,7 @@ export default defineNuxtConfig({
     "~/components/items",
     "~/components/modules",
     "~/components/layoutComponents",
+    "~/components/popups",
   ],
   sourcemap: true,
   vite: {

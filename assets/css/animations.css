@@ -1,49 +1,17 @@
 /* menu */
 .menu-enter-active {
-  transition: all 0.5s ease;
-}
-.menu-leave-active{
-  transition: all 0.5s ease;
-}
-.menu-enter-from{
-  transition: all 0.5s ease;
-}
-.menu-leave-to {
-  transition: all 0.5s ease;
-}
-
-
-.menu-enter-active.menu .menu-left{
-  transform: translateX(0%);
-  transition: all 0.5s ease;
-}
-.menu-leave-active.menu .menu-left{
-  transform: translateX(0%);
-  transition: all 0.5s ease;
-}
-.menu-enter-from.menu .menu-left{
-  transform: translateX(-100%);
-  transition: all 0.5s ease;
-}
-.menu-leave-to.menu .menu-left{
-  transform: translateX(-100%);
-  transition: all 0.5s ease;
-}
-
-
-.menu-enter-active.menu .menu-right{
-  transform: translateX(0%);
-  transition: all 0.5s ease;
-}
-.menu-leave-active.menu .menu-right{
-  transform: translateX(0%);
-  transition: all 0.5s ease;
-}
-.menu-enter-from.menu .menu-right{
   transform: translateX(100%);
   transition: all 0.5s ease;
 }
-.menu-leave-to.menu .menu-right{
+.menu-leave-active{
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.menu-enter-from{
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.menu-leave-to {
   transform: translateX(100%);
   transition: all 0.5s ease;
 }
