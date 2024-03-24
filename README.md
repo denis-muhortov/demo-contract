@@ -38,5 +38,5 @@ npm run preview
 ## Online resource
 
 ```bash
-[demo-contract.vercel.app](https://demo-contract.vercel.app/)
+https://demo-contract.vercel.app
 ```
