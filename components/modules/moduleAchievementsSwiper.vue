@@ -9,9 +9,21 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 
 export default {
+    data: () => ({
+        countSlide: 4,
+    }),
   components: {
     Swiper,
     SwiperSlide,
+  },
+  mounted(){
+    const screenWidth = window.screen.width
+    if(screenWidth <= 1920){
+        this.countSlide = 4;
+    }
+    if(screenWidth <= 640){
+        this.countSlide = 2;
+    }
   },
   setup() {
     return {
@@ -22,7 +34,7 @@ export default {
 </script>
 <template>
     <swiper
-        :slidesPerView="4"
+        :slidesPerView="countSlide"
         :spaceBetween="30"
         :grabCursor="true"
         :autoplay="{
@@ -70,6 +82,35 @@ export default {
         font-size: 12px;
         font-weight: 600;
         color: var(--black);
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .swiper-slide{
+        .title{
+            font-size: 60px;
+        }
+    }
+}
+@media screen and (max-width: 1240px) {
+    .swiper-slide{
+        .title{
+            font-size: 36px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .swiper-slide{
+        .title{
+            font-size: 24px;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .swiper-slide{
+        .title{
+            font-size: 18px;
+        }
     }
 }
 </style>

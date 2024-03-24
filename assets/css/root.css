@@ -1,11 +1,52 @@
 :root {
-    --white: #ffffff;
-    --white-grey: #1212124D;
-    --black: #000000;
-    --black-lite: #121212;
-    --black-dark: #1E1E1E;
-    --grey: #D9D9DE;
-    --blue: #00538C;
+  --white: #ffffff;
+  --white-grey: #1212124D;
+  --black: #000000;
+  --black-lite: #121212;
+  --black-dark: #1E1E1E;
+  --grey: #D9D9DE;
+  --blue: #00538C;
 
-    --maxWidth: 1800px;
+  --maxWidth: 1800px;
+}
+
+@media screen and (max-width: 1800px) {
+  :root { 
+    --maxWidth: 1400px;
   }
+}
+@media screen and (max-width: 1440px) {
+  :root { 
+    --maxWidth: 1200px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  :root { 
+    --maxWidth: 980px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  :root { 
+    --maxWidth: 760px;
+  }
+}
+@media screen and (max-width: 800px) {
+  :root { 
+    --maxWidth: 600px;
+  }
+}
+@media screen and (max-width: 640px) {
+  :root { 
+    --maxWidth: 440px;
+  }
+}
+@media screen and (max-width: 460px) {
+  :root { 
+    --maxWidth: 380px;
+  }
+}
+@media screen and (max-width: 380px) {
+  :root { 
+    --maxWidth: 320px;
+  }
+}

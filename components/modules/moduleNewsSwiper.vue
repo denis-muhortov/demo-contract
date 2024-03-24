@@ -9,9 +9,27 @@ import 'swiper/css';
 import { Mousewheel, Autoplay } from 'swiper/modules';
 
 export default {
+    data: () => ({
+        countSlide: 7,
+    }),
   components: {
     Swiper,
     SwiperSlide,
+  },
+  mounted(){
+    const screenWidth = window.screen.width;
+    if(screenWidth < 1920){
+        this.countSlide = 7;
+    }
+    else if(screenWidth < 1800){
+        this.countSlide = 5;
+    }
+    else if(screenWidth < 1440){
+        this.countSlide = 4;
+    }
+    else if(screenWidth < 1020){
+        this.countSlide = 3;
+    }
   },
   setup() {
     return {
@@ -24,7 +42,7 @@ export default {
     <swiper
         :direction="'vertical'"
         :grabCursor="true"
-        :slidesPerView="7"
+        :slidesPerView="countSlide"
         :spaceBetween="30"
         :autoplay="{
             delay: 2500,

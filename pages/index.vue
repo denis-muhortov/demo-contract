@@ -2,11 +2,15 @@
 export default {
     data: () => ({
         store: useAppStore(),
+        isMobile: false,
     }),
     methods: {
     },
     mounted(){
-
+        const screenWidth = window.screen.width;
+        if(screenWidth < 1020){
+            this.isMobile = true;
+        }
     },
     computed:{
 
@@ -85,7 +89,8 @@ export default {
                         </h3>
                     </div>
                     <div class="container__news-module">
-                        <ModuleNewsSwiper/>
+                        <ModuleNewsSwiper v-if="!isMobile"/>
+                        <ModuleNewsSwiperMobile v-else/>
                     </div>
                 </div>
             </div>
@@ -632,4 +637,279 @@ export default {
     }
 }
 
+@media screen and (max-width: 1800px) {
+    .screen-first {
+        .container__title-text{
+            font-size: 60px;
+            padding-bottom: 40px;
+        }
+        .container__title-blocks{
+            width: 650px;
+            padding-bottom: 40px;
+            gap: 15px;
+        }
+        .container__title-blocks .project{
+            width: 180px;
+            height: 80px;
+        }
+        .container__news-module{
+            height: calc(100% - 35px - 24px - 40px);
+        }
+    }
+    .screen-fourth {
+        .block-top h3{
+            font-size: 60px;
+        }
+        .block-bottom-left{
+            max-width: 500px;
+        }
+        .block-bottom-right .title{
+            font-size: 32px;
+        }
+        .block-bottom-right .subtitle{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .block-bottom-right .text{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+    .screen-fifth{
+        .block-top h3{
+            font-size: 60px;
+        }
+    }
+    .screen-six{
+        .block-top h3{
+            font-size: 60px;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .screen-fifth {
+        .block-bottom-left{
+            padding: 30px;
+
+            .text{
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+        }
+        .block-bottom-right {
+            .text{
+                font-size: 24px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1240px) {
+    .screen-first {
+        .container__title-text{
+            font-size: 36px;
+        }
+    }
+    .screen-fourth {
+        .block-top h3{
+            font-size: 36px;
+        }
+    }
+    .screen-fifth{
+        .block-top h3{
+            font-size: 36px;
+        }
+    }
+    .screen-six{
+        .block-top h3{
+            font-size: 36px;
+        }
+    }
+}
+@media screen and (max-width: 1020px) {
+    .screen-first {
+        .container__title{
+            padding-top: 40px;
+        }
+        .container__title-text{
+            font-size: 24px;
+        }
+        .container__title-blocks{
+            width: 100%;
+            padding-bottom: 40px;
+            gap: 15px;
+        }
+        .container__title-blocks .project{
+            width: 30%;
+            height: 100px;
+        }
+        .container__news{
+            position: relative;
+            top: unset;
+            right: unset;
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .screen-fourth {
+        .block-bottom-left{
+            width: fit-content;
+            max-width: 300px;
+            margin-right: 50px
+        }
+        .block-bottom-right{
+            width: 100%;
+        }
+    }
+    .screen-fifth {
+        .block-top{
+            margin-bottom: 50px;
+        }
+        .block-bottom{
+            flex-direction: column;
+            gap: 20px;
+        }
+        .block-bottom-left{
+            width: 100%;
+            padding: 30px;
+
+            .text{
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+        }
+        .block-bottom-right {
+            width: 100%;
+            .title{
+                font-size: 24px;
+            }
+            .text{
+                font-size: 18px;
+            }
+        }
+    }
+    .screen-six {
+        .block-top{
+            margin-bottom: 50px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .screen-fourth {
+        .block-bottom{
+            flex-direction: column;
+        }
+        .block-bottom-left{
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .screen-first {
+        .container__title-blocks .project{
+            width: calc(50% - 15px);
+            height: 100px;
+        }
+    }
+    .screen-second{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .screen-third{
+        margin-bottom: 50px;
+    }
+    .screen-fourth {
+        margin-bottom: 50px;
+
+        .block-top{
+            margin-bottom: 40px;
+        }
+        .block-top h3{
+            font-size: 24px;
+        }
+        .block-bottom-right .title{
+            font-size: 20px;
+        }
+        .block-bottom-right .subtitle{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .block-bottom-right .text{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+    }
+    .screen-fifth{
+        margin-bottom: 50px;
+
+        .block-top{
+            margin-bottom: 20px;
+        }
+        .block-top h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .block-bottom{
+            gap: 20px;
+        }
+        .block-bottom-left{
+            padding: 20px;
+
+            .text{
+                font-size: 16px;
+            }
+        }
+        .block-bottom-right {
+            width: 100%;
+            .title{
+                font-size: 18px;
+            }
+            .text{
+                font-size: 16px;
+            }
+        }
+    }
+    .screen-six{
+        margin-bottom: 50px;
+        
+        .block-top h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    .screen-first {
+        .container__title-blocks .project{
+            width: 100%;
+            height: 100px;
+        }
+    }
+    .screen-fourth {
+        .info_block{
+            margin-top: 10px;
+            flex-direction: column;
+        }
+        .block-bottom-right .info_block-content{
+            width: 100%;
+        }
+        .block-bottom-right .info_block-content:last-child{
+            margin-right: 0px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &::before {
+                width: 100%;
+                height: 1px;
+                margin: 10px 0;
+            }
+
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
 </style>

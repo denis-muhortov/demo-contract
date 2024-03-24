@@ -65,4 +65,27 @@ export default {
     font-weight: 700;
     color: var(--black-lite);
 }
+
+@media screen and (max-width: 640px) {
+    .text{
+        font-size: 16px;
+    }
+    .footer_block{
+        &-right{
+            text-align: right;
+            width: 200px;
+        }
+    }   
+}
+@media screen and (max-width: 380px) {
+    .text{
+        font-size: 14px;
+    }
+    .footer_block{
+        &-right{
+            text-align: right;
+            width: 200px;
+        }
+    }     
+}
 </style>

@@ -6,11 +6,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
 // import required modules
-import { Autoplay } from 'swiper/modules';
+import { Mousewheel, Autoplay } from 'swiper/modules';
 
 export default {
     data: () => ({
-        countSlide: 6,
+        countSlide: 7,
     }),
   components: {
     Swiper,
@@ -18,36 +18,30 @@ export default {
   },
   mounted(){
     const screenWidth = window.screen.width
-    if(screenWidth < 1920){
-        this.countSlide = 6;
-    }
-    if(screenWidth < 1800){
-        this.countSlide = 5;
-    }
-    if(screenWidth < 1440){
-        this.countSlide = 4;
-    }
     if(screenWidth <= 1020){
         this.countSlide = 3;
     }
-    if(screenWidth <= 800){
+    if(screenWidth <= 640){
         this.countSlide = 2;
+    }
+    if(screenWidth <= 460){
+        this.countSlide = 1;
     }
   },
   setup() {
     return {
-      modules: [Autoplay],
+      modules: [Mousewheel, Autoplay],
     };
   },
 };
 </script>
 <template>
     <swiper
+        :grabCursor="true"
         :slidesPerView="countSlide"
         :spaceBetween="30"
-        :grabCursor="true"
         :autoplay="{
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: true,
         }"
         :modules="modules"
@@ -56,12 +50,12 @@ export default {
         <swiper-slide v-for="a in 10">
             <div class="title">
                 <h4>
-                    700+
+                    22.03.2024
                 </h4>
             </div>
             <div class="text">
                 <p>
-                    Сотрудников в штате
+                    Проекты КРТ создадут новые точки притяжения в столице – эксперт
                 </p>
             </div>
         </swiper-slide>
@@ -78,33 +72,36 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: auto;
-    height: auto;
+    width: 230px;
+    min-height: 100px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: var(--white);
+    transition: all 0.25s ease;
+    overflow-y: auto;
 
     .title{
-        font-size: 90px;
+        font-size: 12px;
         font-weight: 800;
-        color: var(--black);
+        color: var(--blue);
         margin-bottom: 5px;
     }
     .text{
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--black);
     }
-}
-@media screen and (max-width: 1200px) {
-    .swiper-slide{
-        .title{
-            font-size: 70px;
+
+    @media (hover: hover) {
+        &:hover{
+            transform: scale(0.9);
+            box-shadow: 0 0 10px color-mix(in srgb, var(--blue) 50%, var(--white));
         }
     }
-}
-@media screen and (max-width: 800px) {
-    .swiper-slide{
-        .title{
-            font-size: 50px;
-        }
+
+    &:active{
+        transform: scale(0.95);
     }
 }
 </style>
