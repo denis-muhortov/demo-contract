@@ -23,7 +23,14 @@ export default {
 <template>
     <menu class="header_container" ref="Refheader">
         <div class="header_container-block">
-            <div class="block__top">
+            <div class="block__top"
+                v-motion
+                :initial="{ opacity: 0, y: -10 }"
+                :enter="{ opacity: 1, y: 0 }"
+                :visible="{ opacity: 1, y: 0 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :delay="200"
+            >
                 <div class="block__top-left">
                     <button class="button-link" type="button" aria-label="email press@glavapu.mos.ru" title="email press@glavapu.mos.ru">
                         <a href="mailto:press@glavapu.mos.ru" target="_blank" rel="noopener noreferrer">
@@ -80,7 +87,14 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="block__bottom">
+            <div class="block__bottom"
+                v-motion
+                :initial="{ opacity: 0, y: -10 }"
+                :enter="{ opacity: 1, y: 0 }"
+                :visible="{ opacity: 1, y: 0 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :delay="400"
+            >
                 <div class="block__bottom-left">
                     <button class="button-impaired" type="button" aria-label="The main Architectural and Planning Department of Moscow Architecture" title="Главное архитектурно-планировочное управление Москомархитектуры">
                         <UnLazyImage

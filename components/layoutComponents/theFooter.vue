@@ -16,10 +16,10 @@ export default {
 <template>
     <div class="footer_container"
         v-motion
-        :initial="{ opacity: 0, y: -50 }"
+        :initial="{ opacity: 0, y: -100 }"
         :enter="{ opacity: 1, y: 0 }"
         :visible="{ opacity: 1, y: 0 }"
-        :visibleOnce="{ opacity: 0, y: 0 }"
+        :visibleOnce="{ opacity: 1, y: 0 }"
         :delay="200"
     >
         <div class="footer_block-left">

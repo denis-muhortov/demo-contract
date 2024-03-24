@@ -15,7 +15,14 @@ export default {
 </script>
 <template>
     <main class="page">
-        <section class="screen screen-first">
+        <section class="screen screen-first"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="screen-bg">
                 <UnLazyImage
                     src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2802.webp"
@@ -27,13 +34,27 @@ export default {
             </div>
             <div class="grid">
                 <div class="container__title">
-                    <div class="container__title-text">
+                    <div class="container__title-text"
+                        v-motion
+                        :initial="{ opacity: 0, y: -100 }"
+                        :enter="{ opacity: 1, y: 0 }"
+                        :visible="{ opacity: 1, y: 0 }"
+                        :visibleOnce="{ opacity: 1, y: 0 }"
+                        :delay="300"
+                    >
                         <h1>
                             Создание качественной <br>
                             городской среды
                         </h1>
                     </div>
-                    <div class="container__title-blocks">
+                    <div class="container__title-blocks"
+                        v-motion
+                        :initial="{ opacity: 0, y: -100 }"
+                        :enter="{ opacity: 1, y: 0 }"
+                        :visible="{ opacity: 1, y: 0 }"
+                        :visibleOnce="{ opacity: 1, y: 0 }"
+                        :delay="500"
+                    >
                         <div class="project" v-for="a in 6">
                             <UnLazyImage
                                 src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/123%2013.png"
@@ -50,7 +71,14 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="container__news">
+                <div class="container__news"
+                    v-motion
+                    :initial="{ opacity: 0, x: -100 }"
+                    :enter="{ opacity: 1, x: 0 }"
+                    :visible="{ opacity: 1, x: 0 }"
+                    :visibleOnce="{ opacity: 1, x: 0 }"
+                    :delay="700"
+                >
                     <div class="container__news-title">
                         <h3>
                             Новости
@@ -62,25 +90,60 @@ export default {
                 </div>
             </div>
         </section>
-        <section class="screen screen-second">
+        <section class="screen screen-second"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="grid">
                 <ModuleEmployeesSwiper/>
             </div>
         </section>
-        <section class="screen screen-third">
+        <section class="screen screen-third"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="grid">
                 <ModuleProjectsSwiper/>
             </div>
         </section>
-        <section class="screen screen-fourth">
+        <section class="screen screen-fourth"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="grid">
-                <div class="block-top">
+                <div class="block-top"
+                    v-motion
+                    :initial="{ opacity: 0, y: -100 }"
+                    :enter="{ opacity: 1, y: 0 }"
+                    :visible="{ opacity: 1, y: 0 }"
+                    :visibleOnce="{ opacity: 1, y: 0 }"
+                    :delay="200"
+                >
                     <h3>
                         Наши учредители
                     </h3>
                 </div>
                 <div class="block-bottom">
-                    <div class="block-bottom-left">
+                    <div class="block-bottom-left"
+                        v-motion
+                        :initial="{ opacity: 0, x: -100 }"
+                        :enter="{ opacity: 1, x: 0 }"
+                        :visible="{ opacity: 1, x: 0 }"
+                        :visibleOnce="{ opacity: 1, x: 0 }"
+                        :delay="300"
+                    >
                         <UnLazyImage
                             src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Ellipse-19.webp"
                             blurhash="CpLDc3xt~poe%2WVWBWB"
@@ -89,7 +152,14 @@ export default {
                             class="image"
                         />
                     </div>
-                    <div class="block-bottom-right">
+                    <div class="block-bottom-right"
+                        v-motion
+                        :initial="{ opacity: 0, x: -100 }"
+                        :enter="{ opacity: 1, x: 0 }"
+                        :visible="{ opacity: 1, x: 0 }"
+                        :visibleOnce="{ opacity: 1, x: 0 }"
+                        :delay="400"
+                    >
                         <div class="title">
                             <p>
                                 В. Ю. Княжевская 
@@ -143,15 +213,36 @@ export default {
                 </div>
             </div>
         </section>
-        <section class="screen screen-fifth">
+        <section class="screen screen-fifth"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="grid">
-                <div class="block-top">
+                <div class="block-top"
+                v-motion
+                    :initial="{ opacity: 0, y: -100 }"
+                    :enter="{ opacity: 1, y: 0 }"
+                    :visible="{ opacity: 1, y: 0 }"
+                    :visibleOnce="{ opacity: 1, y: 0 }"
+                    :delay="200"
+                >
                     <h3>
                         О главАПУ
                     </h3>
                 </div>
                 <div class="block-bottom">
-                    <div class="block-bottom-left">
+                    <div class="block-bottom-left"
+                        v-motion
+                        :initial="{ opacity: 0, x: -100 }"
+                        :enter="{ opacity: 1, x: 0 }"
+                        :visible="{ opacity: 1, x: 0 }"
+                        :visibleOnce="{ opacity: 1, x: 0 }"
+                        :delay="300"
+                    >
                         <div class="text">
                             <p>
                                 Хочет иметь удобный доступ к своим финансовым счетам и операциям в любое время и из любой точки мира
@@ -168,7 +259,14 @@ export default {
                             </p>
                         </div>
                     </div>
-                    <div class="block-bottom-right">
+                    <div class="block-bottom-right"
+                        v-motion
+                        :initial="{ opacity: 0, x: -100 }"
+                        :enter="{ opacity: 1, x: 0 }"
+                        :visible="{ opacity: 1, x: 0 }"
+                        :visibleOnce="{ opacity: 1, x: 0 }"
+                        :delay="400"
+                    >
                         <div class="title">
                             <p>
                                 30 лет ГлавАПУ на территории города Москва участвует в:
@@ -208,7 +306,14 @@ export default {
                 </div>
             </div>
         </section>
-        <section class="screen screen-six">
+        <section class="screen screen-six"
+            v-motion
+            :initial="{ opacity: 0, y: 0 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :visibleOnce="{ opacity: 1, y: 0 }"
+            :delay="200"
+        >
             <div class="grid">
                 <div class="block-top">
                     <h3>
