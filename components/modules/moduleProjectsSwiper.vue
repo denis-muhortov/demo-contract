@@ -242,6 +242,7 @@ export default {
         }
         .block-bottom-image{
             height: 200px;
+            margin-bottom: 20px;
         }
     }
 }
