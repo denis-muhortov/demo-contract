@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Thin.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-ExtraLight.ttf') format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Light.ttf') format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-SemiBold.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-ExtraBold.ttf') format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Onest-font;
+    src: url('https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/onex-images/fonts/Onest-Black.ttf') format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
