@@ -84,9 +84,9 @@ export default {
                     :delay="700"
                 >
                     <div class="container__news-title">
-                        <h3>
+                        <h2>
                             Новости
-                        </h3>
+                        </h2>
                     </div>
                     <div class="container__news-module">
                         <ModuleNewsSwiper v-if="!isMobile"/>
