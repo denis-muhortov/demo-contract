@@ -5,7 +5,7 @@ export default {
         isMobile: false,
     }),
     methods: {
-
+        
     },
     mounted(){
         let Refheader: any = this.$refs.Refheader;
@@ -16,7 +16,7 @@ export default {
 
         });
 
-        const screenWidth = window.screen.width
+        const screenWidth = document.documentElement.clientWidth;
         if(screenWidth <= 1020){
             this.isMobile = true;
         }

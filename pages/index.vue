@@ -19,7 +19,7 @@ export default {
     methods: {
     },
     mounted(){
-        const screenWidth = window.screen.width;
+        const screenWidth = document.documentElement.clientWidth;
         if(screenWidth < 1020){
             this.isMobile = true;
         }

@@ -17,7 +17,7 @@ export default {
     SwiperSlide,
   },
   mounted(){
-    const screenWidth = window.screen.width
+    const screenWidth = document.documentElement.clientWidth;
     if(screenWidth < 1920){
         this.countSlide = 6;
     }
