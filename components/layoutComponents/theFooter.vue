@@ -24,12 +24,12 @@ export default {
     >
         <div class="footer_block-left">
             <p class="text">
-                ONEX STUDIOS. All Rights Reserved.
+                All Rights Reserved.
             </p>
         </div>
         <div class="footer_block-right">
             <p class="text">
-                2017 — 2024
+                2024
             </p>
         </div>
     </div>
