@@ -142,7 +142,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10px;
+    padding: 10px 10px 80px 10px;
     z-index: 11;
     transition: all 0.25s ease;
 
