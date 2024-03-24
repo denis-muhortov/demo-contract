@@ -1,3 +1,15 @@
+<script setup lang="ts">
+// SEO
+useSeoMeta({
+  title: 'ГБУ «ГлавАПУ» - Создание качественной городской среды',
+  ogTitle: 'ГБУ «ГлавАПУ» - Создание качественной городской среды',
+  description: 'ГБУ «ГлавАПУ» - Создание качественной городской среды',
+  ogDescription: 'ГБУ «ГлавАПУ» - Создание качественной городской среды',
+  ogImage: 'https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-logo.png',
+  keywords: 'ГБУ «ГлавАПУ» - Создание качественной городской среды',
+})
+</script>
+
 <script lang="ts">
 export default {
     data: () => ({
@@ -32,7 +44,7 @@ export default {
                     src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2802.webp"
                     blurhash="CVIM=~57S}r?}[WCX8e:"
                     auto-sizes
-                    alt="Главное архитектурно-планировочное управление Москомархитектуры"
+                    alt="Главное фото"
                     class="image"
                 />
             </div>

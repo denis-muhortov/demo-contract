@@ -107,7 +107,7 @@ export default {
                             src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-logo.png"
                             blurhash="CMJ[r59G01ae^+IV^+~V"
                             auto-sizes
-                            alt="Главное архитектурно-планировочное управление Москомархитектуры"
+                            alt="логотип"
                             class="image"
                         />
                         <a href="/" rel="noopener noreferrer">
@@ -196,7 +196,7 @@ export default {
                                 src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-logo.png"
                                 blurhash="CMJ[r59G01ae^+IV^+~V"
                                 auto-sizes
-                                alt="Главное архитектурно-планировочное управление Москомархитектуры"
+                                alt="логотип"
                                 class="image"
                             />
                             <a href="/" rel="noopener noreferrer">
@@ -344,6 +344,10 @@ export default {
                         font-weight: 700;
                         color: var(--blue);
                     }
+
+                    .image{
+                        width: 30px;
+                    }
                 }
             }
 
@@ -484,6 +488,10 @@ export default {
                     line-height: normal;
                     font-weight: 700;
                     color: var(--blue);
+                }
+
+                .image{
+                    width: 30px;
                 }
             }
         }
