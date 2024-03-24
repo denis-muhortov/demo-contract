@@ -15,6 +15,20 @@ export default defineNuxtConfig({
         // { src: 'https://awesome-lib.js' }
       ],
       link: [
+        {
+          rel: "preload", 
+          fetchpriority: "high",
+          as: "image",
+          href: "https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2802.webp",
+          type: "image/webp"
+        },
+        {
+          rel: "preload", 
+          fetchpriority: "high",
+          as: "image",
+          href: "https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/main_mobile_screen.webp",
+          type: "image/webp"
+        },
         // <link rel="stylesheet" href="https://myawesome-lib.css">
         // { rel: "stylesheet", href: "https://awesome-lib.css" },
       ],
