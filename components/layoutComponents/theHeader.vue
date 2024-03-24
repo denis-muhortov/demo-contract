@@ -182,7 +182,7 @@ export default {
         </div>
         <div class="header_mobile__container" v-else
             v-motion
-            :initial="{ opacity: 0, y: -20 }"
+            :initial="{ opacity: 0, y: -10 }"
             :enter="{ opacity: 1, y: 0 }"
             :visible="{ opacity: 1, y: 0 }"
             :visibleOnce="{ opacity: 1, y: 0 }"
