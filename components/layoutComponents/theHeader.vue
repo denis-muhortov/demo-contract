@@ -207,7 +207,9 @@ export default {
                     </div>
                 </div>
                 <div class="mobile-right">
-                    <div class="menu" @click="store.showMobileMenu = !store.showMobileMenu">
+                    <div class="menu" 
+                            :class="{active: store.showMobileMenu}"
+                            @click="store.showMobileMenu = !store.showMobileMenu">
                         <div class="menu-line"/>
                         <div class="menu-line"/>
                         <div class="menu-line"/>
@@ -487,6 +489,7 @@ export default {
         }
         .mobile-right{
             .menu{
+                position: relative;
                 width: 50px;
                 height: 20px;
                 display: flex;
@@ -499,9 +502,27 @@ export default {
                     height: 3px;
                     border-radius: 20px;
                     background-color: var(--blue);
+                    transition: all 0.25s ease;
+                }
+            }
+            .menu.active{
+                justify-content: center;
+                .menu-line{
+                    width: 100%;
+                    height: 5px;
+                    border-radius: 20px;
+                    background-color: var(--blue);
 
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
                     &:nth-child(1){
-
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(3){
+                        position: absolute;
+                        transform: rotate(-45deg);
                     }
                 }
             }
