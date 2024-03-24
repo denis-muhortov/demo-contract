@@ -73,8 +73,8 @@ export default {
                     >
                         <div class="project" v-for="a in 6">
                             <UnLazyImage
-                                src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/123%2013.png"
-                                blurhash="CVIM=~57S}r?}[WCX8e:"
+                                src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-moscow-big.png"
+                                blurhash="CLJYu1Rk{g%2Q-RjMxxu"
                                 auto-sizes
                                 alt="проект"
                                 class="image"
@@ -423,6 +423,10 @@ export default {
                     height: 100px;
                     border-radius: 10px;
                     background-color: var(--white);
+
+                    .image{
+                        width: 32px;
+                    }
 
                     p{
                         font-size: 12px;
