@@ -710,6 +710,11 @@ export default {
         }
         .block-bottom-left{
             max-width: 500px;
+
+            .image{
+                width: 500px;
+                height: 500px;
+            }
         }
         .block-bottom-right .title{
             font-size: 32px;
@@ -735,6 +740,14 @@ export default {
     }
 }
 @media screen and (max-width: 1440px) {
+    .screen-fourth {
+        .block-bottom-left{
+            .image{
+                width: 480px;
+                height: 480px;
+            }
+        }
+    }
     .screen-fifth {
         .block-bottom-left{
             padding: 30px;
@@ -760,6 +773,12 @@ export default {
     .screen-fourth {
         .block-top h3{
             font-size: 36px;
+        }
+        .block-bottom-left{
+            .image{
+                width: 392px;
+                height: 392px;
+            }
         }
     }
     .screen-fifth{
@@ -805,7 +824,14 @@ export default {
         .block-bottom-left{
             width: fit-content;
             max-width: 300px;
-            margin-right: 50px
+            margin-right: 50px;
+
+            .image{
+                width: 200px;
+                height: 200px;
+                min-width: 200px;
+                min-height: 200px;
+            }
         }
         .block-bottom-right{
             width: 100%;
