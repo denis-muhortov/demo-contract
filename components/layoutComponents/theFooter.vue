@@ -43,7 +43,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--black-lite);
+    border: 1px solid var(--black);
     border-radius: 30px;
     margin-bottom: 50px;
 }
