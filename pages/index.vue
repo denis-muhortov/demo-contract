@@ -39,7 +39,7 @@ export default {
             :visibleOnce="{ opacity: 1, y: 0 }"
             :delay="200"
         >
-            <!-- <div class="screen-bg" v-if="!isMobile">
+            <div class="screen-bg" v-if="!isMobile">
                 <UnLazyImage
                     src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2802.webp"
                     blurhash="CVIM=~57S}r?}[WCX8e:"
@@ -56,7 +56,7 @@ export default {
                     alt="Главное фото"
                     class="image"
                 />
-            </div> -->
+            </div>
             <div class="grid">
                 <div class="container__title">
                     <div class="container__title-text"
