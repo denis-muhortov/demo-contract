@@ -4,6 +4,8 @@
         blurhash="CVIM=~57S}r?}[WCX8e:"
         auto-sizes
         alt="Главное фото"
+        ssr
+        preload
         class="image"
     />
 </template>
