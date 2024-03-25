@@ -50,10 +50,14 @@ export default {
             :delay="200"
         >
             <div class="screen-bg" v-if="!isMobile">
-                <BlockMainImage class="image"/>
+                <KeepAlive>
+                    <BlockMainImage class="image"/>
+                </KeepAlive>
             </div>
             <div class="screen-bg" v-else>
-                <BlockMainImageMobile class="image"/>
+                <KeepAlive>
+                    <BlockMainImageMobile class="image"/>
+                </KeepAlive>
             </div>
             <div class="grid">
                 <div class="container__title">
