@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     "~/components",
     "~/components/items",
     "~/components/modules",
+    "~/components/blocks",
     "~/components/layoutComponents",
     "~/components/popups",
   ],

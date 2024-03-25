@@ -22,6 +22,9 @@ export default {
         ModuleEmployeesSwiper : () => import(`@/components/modules/moduleEmployeesSwiper.vue`),
         ModuleProjectsSwiper : () => import(`@/components/modules/moduleProjectsSwiper.vue`),
         ModuleAchievementsSwiper : () => import(`@/components/modules/moduleAchievementsSwiper.vue`),
+
+        BlockMainImage : () => import(`@/components/blocks/blockMainImage.vue`),
+        BlockMainImageMobile : () => import(`@/components/blocks/blockMainImage_mobile.vue`),
     },
     methods: {
     },
@@ -47,22 +50,10 @@ export default {
             :delay="200"
         >
             <div class="screen-bg" v-if="!isMobile">
-                <UnLazyImage
-                    src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2802.webp"
-                    blurhash="CVIM=~57S}r?}[WCX8e:"
-                    auto-sizes
-                    alt="Главное фото"
-                    class="image"
-                />
+                <BlockMainImage class="image"/>
             </div>
             <div class="screen-bg" v-else>
-                <UnLazyImage
-                    src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/main_mobile_screen.webp"
-                    blurhash="CVIM=~57S}r?}[WCX8e:"
-                    auto-sizes
-                    alt="Главное фото"
-                    class="image"
-                />
+                <BlockMainImageMobile class="image"/>
             </div>
             <div class="grid">
                 <div class="container__title">
