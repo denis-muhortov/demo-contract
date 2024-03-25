@@ -61,14 +61,18 @@ export default {
 }
 .footer{
   display: flex;
-  height: 64px + 50px;
+  height: 250px;
   flex-shrink: 0;
-  margin: 100px 0 0 0;
 }
 
 @media screen and (max-width: 1020px) {
   .header{
     height: 80px;
+  }
+}
+@media screen and (max-width: 800px) { 
+  .footer{
+    height: fit-content;
   }
 }
 </style>
