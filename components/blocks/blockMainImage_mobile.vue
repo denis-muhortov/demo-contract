@@ -7,10 +7,3 @@
         class="image"
     />
 </template>
-<style lang="scss" scoped>
-@media screen and (max-width: 1020px) {
-    .image{
-        max-height: 610px;
-    }
-}
-</style>
