@@ -447,20 +447,6 @@ body > span {
   display: unset;
 }
 
-:root {
-  --apartvill-orange-color-hover: #ff7f00;
-  --apartvill-orange-color: #f9b123;
-  --apartvill-blue-color: #0a73b9;
-  --apartvill-blue-color-hover: #00a9e3;
-  --apartvill-text-color: #282828;
-  --white: #ffffff;
-  --white-grey: #f3f3f3;
-  --grey: #737373;
-  --grey-lite: #909090;
-  --green: #1faf38;
-  --red: #e54f4f;
-  --black: #000000;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
