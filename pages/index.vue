@@ -447,6 +447,8 @@ export default {
 
                     .image{
                         width: 32px;
+                        height: 36px;
+                        object-fit: contain
                     }
 
                     p{

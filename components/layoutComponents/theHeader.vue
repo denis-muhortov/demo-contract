@@ -492,6 +492,8 @@ export default {
 
                 .image{
                     width: 30px;
+                    height: 38px;
+                    object-fit: contain
                 }
             }
         }
