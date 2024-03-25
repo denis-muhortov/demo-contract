@@ -54,7 +54,11 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     '@unlazy/nuxt',
     '@vueuse/motion/nuxt',
+    'nuxt-delay-hydration',
   ],
+  delayHydration: {
+    mode: 'init'
+  },
   ssr: true,
 
   css: [
