@@ -281,6 +281,12 @@ export default {
                         line-height: 8px;
                         font-weight: 700;
                     }
+
+                    .image{
+                        width: 21px;
+                        height: 15px;
+                        object-fit: contain;
+                    }
                 }
                 .info_block{
                     display: flex;
@@ -347,6 +353,8 @@ export default {
 
                     .image{
                         width: 30px;
+                        height: 38px;
+                        object-fit: contain;
                     }
                 }
             }
@@ -395,6 +403,12 @@ export default {
                         width: 16px;
                         height: 16px;
                         background-color: transparent;
+
+                        .image{
+                            width: 16px;
+                            height: 16px;
+                            object-fit: contain;
+                        }
                     }
 
                     a:last-child{

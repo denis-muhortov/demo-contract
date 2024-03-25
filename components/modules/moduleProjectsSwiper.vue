@@ -109,6 +109,9 @@ export default {
             display: flex;
 
             .arrow__left {
+                width: 31px;
+                height: 52px;
+                object-fit: contain;
                 transform: rotate(180deg);
                 margin-right: 60px;
                 transition: all 0.25s ease;
@@ -126,6 +129,9 @@ export default {
             }
 
             .arrow__right {
+                width: 31px;
+                height: 52px;
+                object-fit: contain;
                 transition: all 0.25s ease;
                 cursor: pointer;
 
