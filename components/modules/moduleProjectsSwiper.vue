@@ -12,11 +12,18 @@ export default {
     data() {
         return {
             swiper: null,
+            isMobile: false,
         };
     },
     components: {
         Swiper,
         SwiperSlide,
+    },
+    mounted(){
+        const screenWidth = document.documentElement.clientWidth;
+        if(screenWidth < 1020){
+            this.isMobile = true;
+        }
     },
     methods: {
         prevSlide() {
@@ -63,7 +70,8 @@ export default {
                 </p>
             </div>
             <div class="block-bottom-image">
-                <UnLazyImage src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2827.webp" blurhash="C]Hek7WVWBf6~qWVWUj[" auto-sizes alt="Проект планировки территории" class="image" />
+                <UnLazyImage v-if="!isMobile" src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Rectangle-2827.webp" blurhash="C]Hek7WVWBf6~qWVWUj[" auto-sizes alt="Проект планировки территории" class="image" />
+                <UnLazyImage v-else src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/project_mobile.webp" blurhash="C]Hek7WVWBf6~qWVWUj[" auto-sizes alt="Проект планировки территории" class="image" />
             </div>
         </div>
     </swiper-slide>

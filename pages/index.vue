@@ -179,7 +179,16 @@ export default {
                         :delay="300"
                     >
                         <UnLazyImage
+                            v-if="!isMobile"
                             src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/Ellipse-19.webp"
+                            blurhash="CpLDc3xt~poe%2WVWBWB"
+                            auto-sizes
+                            alt="В. Ю. Княжевская "
+                            class="image"
+                        />
+                        <UnLazyImage
+                            v-else
+                            src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/knashevskai_mobile.webp"
                             blurhash="CpLDc3xt~poe%2WVWBWB"
                             auto-sizes
                             alt="В. Ю. Княжевская "
