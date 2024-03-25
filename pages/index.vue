@@ -531,8 +531,8 @@ export default {
 
                 .image{
                     border-radius: 50%;
-                    width: 100%;
-                    height: auto;
+                    width: 600px;
+                    height: 600px;
                     object-fit: contain;
                 }
             }
