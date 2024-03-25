@@ -51,12 +51,12 @@ export default {
         >
             <div class="screen-bg" v-if="!isMobile">
                 <KeepAlive>
-                    <BlockMainImage class="image"/>
+                    <LazyBlockMainImage class="image"/>
                 </KeepAlive>
             </div>
             <div class="screen-bg" v-else>
                 <KeepAlive>
-                    <BlockMainImageMobile class="image"/>
+                    <LazyBlockMainImageMobile class="image"/>
                 </KeepAlive>
             </div>
             <div class="grid">
@@ -113,8 +113,8 @@ export default {
                     </div>
                     <div class="container__news-module">
                         <KeepAlive>
-                            <ModuleNewsSwiper v-if="!isMobile"/>
-                            <ModuleNewsSwiperMobile v-else/>
+                            <LazyModuleNewsSwiper v-if="!isMobile"/>
+                            <LazyModuleNewsSwiperMobile v-else/>
                         </KeepAlive>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ export default {
         >
             <div class="grid">
                 <KeepAlive>
-                    <ModuleEmployeesSwiper/>
+                    <LazyModuleEmployeesSwiper/>
                 </KeepAlive>
             </div>
         </section>
@@ -144,7 +144,7 @@ export default {
         >
             <div class="grid">
                 <KeepAlive>
-                    <ModuleProjectsSwiper/>
+                    <LazyModuleProjectsSwiper/>
                 </KeepAlive>
             </div>
         </section>
@@ -356,10 +356,10 @@ export default {
                 </div>
                 <div class="block-bottom">
                     <KeepAlive>
-                        <ModuleAchievementsSwiper/>
+                        <LazyModuleAchievementsSwiper/>
                     </KeepAlive>
                     <KeepAlive>
-                        <ModuleAchievementsSwiper/>
+                        <LazyModuleAchievementsSwiper/>
                     </KeepAlive>
                 </div>
             </div>
