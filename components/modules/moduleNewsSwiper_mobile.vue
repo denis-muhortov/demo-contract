@@ -49,9 +49,9 @@ export default {
     >
         <swiper-slide v-for="a in 10">
             <div class="title">
-                <h4>
+                <p>
                     22.03.2024
-                </h4>
+                </p>
             </div>
             <div class="text">
                 <p>
