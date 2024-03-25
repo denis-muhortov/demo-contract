@@ -117,8 +117,10 @@ export default {
                         </h2>
                     </div>
                     <div class="container__news-module">
-                        <ModuleNewsSwiper v-if="!isMobile"/>
-                        <ModuleNewsSwiperMobile v-else/>
+                        <KeepAlive>
+                            <ModuleNewsSwiper v-if="!isMobile"/>
+                            <ModuleNewsSwiperMobile v-else/>
+                        </KeepAlive>
                     </div>
                 </div>
             </div>
@@ -132,7 +134,9 @@ export default {
             :delay="200"
         >
             <div class="grid">
-                <ModuleEmployeesSwiper/>
+                <KeepAlive>
+                    <ModuleEmployeesSwiper/>
+                </KeepAlive>
             </div>
         </section>
         <section class="screen screen-third"
@@ -144,7 +148,9 @@ export default {
             :delay="200"
         >
             <div class="grid">
-                <ModuleProjectsSwiper/>
+                <KeepAlive>
+                    <ModuleProjectsSwiper/>
+                </KeepAlive>
             </div>
         </section>
         <section class="screen screen-fourth"
@@ -354,8 +360,12 @@ export default {
                     </h3>
                 </div>
                 <div class="block-bottom">
-                    <ModuleAchievementsSwiper/>
-                    <ModuleAchievementsSwiper/>
+                    <KeepAlive>
+                        <ModuleAchievementsSwiper/>
+                    </KeepAlive>
+                    <KeepAlive>
+                        <ModuleAchievementsSwiper/>
+                    </KeepAlive>
                 </div>
             </div>
         </section>
