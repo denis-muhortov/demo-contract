@@ -79,14 +79,6 @@ export default defineNuxtConfig({
     // ...other options
   },
 
-  nitro: {
-    routeRules: {
-      "/img/**": { headers: { 'cache-control': `public,max-age=31536000,s-maxage=31536000` } },
-      "https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/**": { headers: { 'cache-control': `public,max-age=31536000,s-maxage=31536000` } },
-    }
-  },
-
-
   imports: {
     dirs: ["./stores"],
   },

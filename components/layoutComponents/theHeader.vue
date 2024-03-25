@@ -60,7 +60,7 @@ export default {
                             src="https://tbhhbwhszmtjaznapwbc.supabase.co/storage/v1/object/public/demo/demo-glasses.png"
                             blurhash="CMK1%fWBD%M{~qayWBWB"
                             auto-sizes
-                            alt="Версия для слабовидящих"
+                            alt="Слабовидящим"
                             class="image"
                         />
                         <a href="/" target="_blank" rel="noopener noreferrer">

@@ -55,9 +55,9 @@ export default {
     >
         <swiper-slide v-for="a in 10">
             <div class="title">
-                <h4>
+                <p>
                     700+
-                </h4>
+                </p>
             </div>
             <div class="text">
                 <p>
