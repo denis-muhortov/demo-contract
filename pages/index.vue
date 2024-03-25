@@ -16,6 +16,13 @@ export default {
         store: useAppStore(),
         isMobile: false,
     }),
+    components:{
+        ModuleNewsSwiper : () => import(`@/components/modules/moduleNewsSwiper.vue`),
+        ModuleNewsSwiperMobile : () => import(`@/components/modules/moduleNewsSwiper_mobile.vue`),
+        ModuleEmployeesSwiper : () => import(`@/components/modules/moduleEmployeesSwiper.vue`),
+        ModuleProjectsSwiper : () => import(`@/components/modules/moduleProjectsSwiper.vue`),
+        ModuleAchievementsSwiper : () => import(`@/components/modules/moduleAchievementsSwiper.vue`),
+    },
     methods: {
     },
     mounted(){
